@@ -1,0 +1,182 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin:0;
+}
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: linear-gradient(to top, rgb(147, 235, 135), rgba(124, 230, 133, 0.644));
+}
+.heading {
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 3rem;
+    animation-name: animates;
+    animation-duration: 3.3s;
+}
+.heading h1 {
+    text-align: center;
+    font-size: 4rem;
+    font-weight: 800;
+    color: #fff;
+    text-shadow:  0 0 10px #848484, 0 10px 20px #e6dada , 0 0 4px #131313;
+}
+/* clock css code    */
+.clock {
+     width: 350px;  
+     height: 350px;
+     border-radius: 50%;
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     border: 20px solid #fff;
+     background: #fff url(clock.png);
+     background-size: cover;
+     box-shadow: inset 0 0 30px rgba(0, 0, 0, .1),  0 20px 20px rgba(0, 0, 0, .2),
+                        0 0 0 4px rgba(255, 255, 255, .1);
+    animation-name: animate;
+    animation-duration: 3s;
+}
+.clock::before {
+    content: '';
+    position: absolute;
+    width: 15px;
+    height: 15px;
+    background: #848484;
+    border: 2px solid #fff;
+    z-index: 100000;
+    border-radius: 50%;;
+}
+.hour, .minute , .seconds {
+    position: absolute;
+
+}
+.hour, .hr {
+    width: 160px;
+    height: 160px;
+}
+.minute, .mn {
+    width: 190px;
+    height: 190px;
+
+}
+.seconds, .sc {
+    width: 230px;
+    height: 230px;
+}
+.hr , .mn , .sc {
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    border-radius: 50%;
+}
+.hr::before {
+    content: '';
+    position: absolute;
+    width: 12px;
+    height: 80px;
+    background: #848484;
+    z-index: 10;
+    border-radius: 6px 6px 0 0;
+
+}
+.mn::before {
+    content: '';
+    position: absolute;
+    width: 8px;
+    height: 90px;
+    background: #d6d6d6;
+    z-index: 11;
+    border-radius: 6px 6px 0 0;
+    
+}
+.sc::before {
+    content: '';
+    position: absolute;
+    width: 2px;
+    height: 150px;
+    background:red;
+    z-index: 12;
+    border-radius: 6px 6px 0 0;
+    
+}
+@media (max-width: 440px) {
+ .heading h1 {
+     text-align: center;
+     font-size: 2.2rem;
+ }   
+}
+
+@keyframes animate {
+    0% { 
+        transform: scale(0.1);
+    }
+    20% {
+        transform: rotateY(360deg);
+    }
+}
+
+@keyframes animates {
+    0% {
+        transform: rotate(-360deg);
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
